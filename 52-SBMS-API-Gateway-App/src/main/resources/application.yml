@@ -1,0 +1,14 @@
+server:
+  port: 5555
+spring:
+  application:
+    name: API-GATEWAY
+zuul:
+  prefix: /ms
+  routes:
+    abc:
+      path: /api2/**
+      serviceId: GREET-SERVICE
+    xyz:
+      path: /api1/**
+      serviceId: WELCOME-SERVICE
